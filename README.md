@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="Web-git-photo.png" alt="Maruf Hasan Shuvo"/>
+  <img src="Web-dev-git-photo.png" alt="Maruf Hasan Shuvo"/>
 </div>
 
 <h1>**Author — MARUF HASAN SHUVO** </h1> 
