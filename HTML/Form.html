@@ -11,18 +11,25 @@
             <legend>
                 {User Details}
             </legend>
+
+                                <!-- Name -->
         <label for="name">Enter your name:</label>
-        <input type="text" id="name"name="username" placeholder="Name">
+        <input type="text" id="name"name="username" placeholder="Name"required>
         <br><br>
-
+                                <!-- password & retype password-->
         <label for="password">Enter your password:</label>
-        <input type="password" id="password" name="userpassword" placeholder="password">
+        <input type="password" id="password" name="userpassword" placeholder="password" required>
+        <br>
+        <label for="password">Re-password</label>
+        <input type="password" id="cofirm_password" name="password" placeholder="Re-password" required>
         <br><br>
 
+
+                                <!-- Email -->
         <label for="email">Enter email:</label>
         <input type="email" id="email" name="email" placeholder="example@example.com">
         <br><br>
-
+                                <!-- Gender -->
         <label for="gender">Gender:</label>
         <label for="male">Male</label>
         <input type="radio" id="gender" name="gender" value="male">
@@ -31,15 +38,15 @@
         <label for="transgender">Transgender</label>
         <input type="radio" id="gender" name="gender" value="transgender">
         <br><br>
-
+                                <!-- Date -->
         <label for="date">Date:</label>
         <input type="date" id="dob" name="date">
         <br><br>
-
+                                <!-- number -->
         <label for="number">Fabourite Number</label>
         <input type="number" id="number" name="number" max="100" min="0" placeholder="0-100">
         <br><br>
-
+                                <!-- submit -->
         <input type="submit" value="Submit Form">
 
 
