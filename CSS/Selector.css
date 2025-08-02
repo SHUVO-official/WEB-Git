@@ -1,0 +1,44 @@
+                /* 1)Universal selectors */
+/* *{
+    margin: 10;
+    padding: 10;
+}*/
+
+                /* 2)Element selector */
+/* h1{
+    color: gray;
+}                
+p{
+    color: blue;
+} */
+
+                /* 3)class selectors */
+/* .p1{
+    color: indigo;
+} 
+.p2{
+    color: blueviolet;
+}       */
+
+
+                /* 4)multiple class selector */
+/* .p2{
+    color: chocolate;
+}
+.pra0{
+    color: darkcyan;
+    font-size: 20px;
+}
+.pra1{
+    border: 5px solid lime;
+} */
+
+                /* 5)id selector */
+#id1{
+    color: cadetblue;
+} 
+#id2{
+    color: blue;
+    border: 2px solid red;
+}               
+

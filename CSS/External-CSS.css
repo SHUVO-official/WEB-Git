@@ -1,0 +1,14 @@
+body{
+    background-color:pink;
+}
+.heading1{
+            color: blue;
+            border: 2px solid darkcyan;
+        }
+        .heading2{
+            color: gray ;
+            border: 3px solid black;
+        }
+        .p1{
+            color:lime;
+        }
