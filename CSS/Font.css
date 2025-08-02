@@ -1,0 +1,25 @@
+body{
+    background-color:lime;
+}
+h1{
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:rgb(90, 13, 179);
+}
+h2{
+    font-family: "Kelly Slab", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:rgb(138, 16, 219);
+}
+.p1{
+    font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.p2{
+    font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

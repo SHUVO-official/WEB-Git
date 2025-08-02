@@ -1,0 +1,44 @@
+                        /* 1)Decendent Selector */
+/* এটা দেয়ার কারন main(এখানে অন্য যেকোনো tag হতে পারত) এর মাজে যদি কোনো এই tag থাকে তাহলে সেটায় কাজ হবে */
+/* main h2{
+    color:gray;
+} */
+
+
+                        /* 2)Child selector */
+/* এটা দেয়ার কারন main(এখানে অন্য যেকোনো tag হতে পারত) এর মাজে যদি কোনো এই tag থাকে তাহলে সেটায় কাজ হবে */
+ /* main > p{
+    color: blue;
+} */
+
+
+                        /* 3)sibling selector */
+/* এটা দেয়ার কারন main(এখানে অন্য যেকোনো tag হতে পারত) এর বাইরে যদি কোনো এই tag থাকে তাহলে সেটায় কাজ হবে */
+
+/* main+p{
+    color: rgb(86, 13, 155);
+    font-size: 30px;
+} */
+
+
+                        /* 4)sibling2 selector */
+/* এটা দেয়ার কারন main(এখানে অন্য যেকোনো tag হতে পারত) বাদে এর পর যেকোনো same tag থাকে তাহলে সেটায় কাজ হবে */
+/* main  ~ p{
+    color: blue;
+    font-size: 30px;
+    border: 3px solid gray;
+} */
+
+
+                        /* 5)[atribute=value] selector */
+  /* এটা দেয়ার মানে এই attribute টা যে যে যায়গায় আসে সে যায়গায় কাজ হবে                   */
+  /* [target="_blank"]{
+    color: rgb(70, 4, 175);
+  } */
+
+
+                        /* 6)[atribute~=value] selector */
+/* এটা দেয়ার মানে এই attribute টা যে যায়গায় এই ভালুএ টা আসে সে যায়গায় কাজ হবে                   */
+/* [alt~="shuvo"]{
+    background-color: black;
+} */
