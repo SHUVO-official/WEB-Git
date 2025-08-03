@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display priorityt</title>
+    <style>
+        #c1{
+            color:blue;
+        }
+        #c2{
+            color: rgb(214, 39, 8);
+        }
+
+        .inline{
+            display: inline;
+        }
+        .block{
+            display: block;
+        }
+        /* .in-block{
+                display: inline-block;
+                width: 100px;
+                
+        } */
+        .in-block{
+            /* display:hidden; */
+            display: none;
+            width: 100px;
+            color: rgb(58, 11, 112);
+        }
+    </style>
+</head>
+<body>
+    <p class="inline" id="c1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, sapiente!</p>
+    <p class="inline" id="c2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, aliquam?</p>
+    <hr>
+    <span class="block" id="c1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, illo.
+    </span>
+    <span class="block" id="c2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ab.
+    </span>
+    <hr>
+    <p class="in-block" id="c1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, sapiente!</p>
+   <p class="in-block" id="c2" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, vel.</p>
+
+</body>
+</html>
