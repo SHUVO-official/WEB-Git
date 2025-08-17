@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>MCQ Quiz</title>
+  <style>
+    body { font-family: kalpurush, sans-serif; text-align: center; background:#8fa0b1; }
+    .option { 
+      display: block; 
+      margin: 10px auto; 
+      padding: 12px; 
+      width: 550px; 
+      border: 2px solid #5118d6; 
+      border-radius: 8px;
+      cursor: pointer; 
+      background: rgb(98, 143, 47);
+      font-size: 20px;
+    }
+    .option:hover { background: #7120b3; }
+    #result { font-size: 20px; margin: 15px; font-weight: bold; }
+    #nextBtn { margin-top: 15px; padding: 10px 20px; font-size: 18px; display:none;border: 5px solid blueviolet;background: #6c1c91; }
+  </style>
+</head>
+<body>
+  <h2 style="color: #530799;">প্রশ্ন <span id="qnum"></span>:</h2>
+  <img id="qimg" src="" width="600"height="150"><br><br>
+
+  <div id="options"></div>
+
+  <p id="result"></p>
+  <img id="explain" style="display:none; width:300px; margin-top:10px;">
+
+  <br>
+  <button id="nextBtn" onclick="nextQuestion()">Next ➡️</button>
+
+  <script>
+    // কীবোর্ড শর্টকাট দিয়ে Next করা যাবে
+        document.addEventListener("keydown", function(event) {
+        if(event.key === "Enter" || event.key === "ArrowRight" || event.key === " " || event.key === "n"){  
+            nextQuestion();
+        }
+        });
+
+    // ===== Question Bank (এখানে তোমার 400 প্রশ্ন রাখবে) =====
+    const questions = [
+      {
+        img: "q1(3).png",
+        options: ["ক", "খ", "গ", "ঘ"],
+        correct: 2,  // 0=ক, 1=খ, 2=গ, 3=ঘ
+        explain: "youtube logo.png"
+      },
+      {
+        img: "q2(1).png",
+        options: ["ক", "খ", "গ", "ঘ"],
+        correct: 0,  // 0=ক, 1=খ, 2=গ, 3=ঘ
+        explain: "youtube logo.png"
+      },
+      
+      // ...এভাবে 400 প্রশ্ন লিখতে পারবে
+    ];
+
+    let current = 0;
+    let answered = false;
+
+    function loadQuestion() {
+      let q = questions[current];
+      document.getElementById("qnum").innerText = current+1;
+      document.getElementById("qimg").src = q.img;
+
+      let optHtml = "";
+      q.options.forEach((opt,i)=>{
+        optHtml += `<button class="option" onclick="checkAnswer(${i})">${opt}</button>`;
+      });
+      document.getElementById("options").innerHTML = optHtml;
+
+      document.getElementById("result").innerText = "";
+      document.getElementById("explain").style.display="none";
+      document.getElementById("nextBtn").style.display="none";
+      answered = false;
+    }
+
+    function checkAnswer(i){
+    //   if(answered) return; // একবার উত্তর দেয়ার পর আবার ক্লিক না হয়
+      answered = true;
+
+      let q = questions[current];
+      if(i===q.correct){
+        document.getElementById("result").innerText = "✅ সঠিক উত্তর!";
+        document.getElementById("result").style.color = "lime";
+        document.getElementById("explain").src = q.explain;
+        document.getElementById("explain").style.display="inline-block";
+      } else {
+        document.getElementById("result").innerText = "❌ ভুল উত্তর!";
+        document.getElementById("result").style.color = "red";
+      }
+      document.getElementById("nextBtn").style.display="inline-block";
+    }
+
+    function nextQuestion(){
+      if(current < questions.length-1){
+        current++;
+        loadQuestion();
+      } else {
+        document.body.innerHTML = "<h1>🎉 সব প্রশ্ন শেষ!</h1>";
+      }
+    }
+
+    // শুরুতেই লোড হবে
+    loadQuestion();
+  </script>
+</body>
+</html>
